@@ -15,5 +15,7 @@
 	mysqli_stmt_bind_param($statement,"siss", $username, $mail, $password, $question1,
 	$ans11, $ans12, $ans13, $ans14);
 	mysqli_stmt_execute($statement);
-	
+	$response=array();
+	$response["success"]=true;
+	echo json_encode($response);
 ?>
